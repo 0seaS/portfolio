@@ -256,7 +256,7 @@ header > ul > li:hover{
 }
 
 @keyframes scrolling {
-  to{
+  to {
     transform: translate(50%);
   }
 }
@@ -315,9 +315,14 @@ header > ul > li:hover{
     animation: scrolling 10s linear infinite;
     animation-direction: alternate-reverse;
   }
+  .welcome {
+    width: 80%;
+  }
 }
 
 /* PROJECTS */
 
-
+#projects > .wrap-section-content > p {
+  margin-top: 2em;
+}
 

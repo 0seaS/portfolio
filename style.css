@@ -84,7 +84,7 @@ header > ul > li:hover{
 
 .welcome {
   position: static;
-  margin: 40vh auto;
+  margin: 30vh auto;
   width: 60%;
   padding: 2em;
   border-radius: 7px;
@@ -311,11 +311,172 @@ header > ul > li:hover{
   .welcome {
     width: 80%;
   }
+
+  .welcome > div > h2 {
+    font-size: 1.3em;
+  }
+
+  .project-image > div {
+    padding-top: 3em;
+  }
 }
 
 /* PROJECTS */
 
 #projects > .wrap-section-content > p {
   margin-top: 2em;
+}
+
+
+/* for pc */
+.projects-list {
+  margin: 1em auto;
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-container{
+  flex-grow: 1;
+  width: 0;
+  transition: width 0.7s ease;
+}
+
+.project-image {
+  height: 350px;
+  background-size: cover;
+  background-position: 50% 25%;
+}
+
+.project-image > div {
+  display: none;
+  width: 70%;
+  padding-top: 6em;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-image > div > div {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.project-image > div > div:nth-child(1) {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 1em;
+}
+
+.project-image > div > div:nth-child(1) > h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.project-image > div > div:nth-child(2) {
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--title-color1);
+  padding: 1em 0;
+}
+
+.project-image div div:nth-child(1){
+  font-size: .8em;
+}
+
+.project-description {
+  visibility: hidden;
+  display: none;
+}
+
+.project-container:hover {
+  width: 60%;
+}
+
+.project-container:hover .project-image > div {
+  display: block;
+}
+
+/*  FOR SMALL DEVICES 
+
+
+.project-container {
+  margin: 1em 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-description {
+  flex-grow: 2;
+  width: 0;
+  z-index: 1;
+}
+
+.project-image{
+  flex-grow: 1;
+  width: 0;
+  transition: width 0.7s ease;
+  background-size: cover;
+  background-position: 50% 25%;
+}
+
+.project-image > div {
+  display: none;
+  visibility: hidden;
+}
+
+*/
+
+.pokeBg{
+  background-image: url('poekdex.png');
+}
+
+.rickBg{
+  background-image: url('rickAndMorty.png');
+}
+
+.weatherBg{
+  background-image: url('weather.png');
+}
+
+.project-image:hover {
+
+  width: 100%;
+  z-index: 1;
+  background-color: red;
+}
+
+.project-image:hover + .project-description{
+  display: none;
+}
+
+/* contact */
+
+#contact > .wrap-section-content > h2 {
+  margin-bottom: 1em;
+}
+.contact__list {
+  margin: 2em auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contact__list > li {
+  transition: scale 1s ease;
+}
+
+.contact__list > li:hover {
+  scale: 1.2;
+}
+
+.contact__list > li > a > img {
+  height: 100px;
+  width: 100px;
+}
+.contact__list > li > a > div {
+  text-align: center;
+  color: #75332D;
 }
 

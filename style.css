@@ -53,7 +53,7 @@ header {
 header > ul {
   background-color: var(--main-color);
   display: flex;
-  padding: 1em;
+  padding: .5em 1em;
   border-radius: 7px;
   box-shadow: 2px 2px 5px black;
   width: 70%;
@@ -78,7 +78,7 @@ header > ul > li:hover{
     var(--main-color) 0%, 
     var(--secondary-color) 20%, 
     var(--bg-color2) 50%);
-  position: static;
+  position: relative;
   overflow: hidden;
 }
 
@@ -113,6 +113,38 @@ header > ul > li:hover{
 .welcome > div > h2::before {
   content: "Frontend";
   animation: changeLetter 12s linear infinite forwards; 
+}
+
+.bubles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bubles > span {
+  background-color: var(--main-color);
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  /*top: -40px;*/
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--main-color),
+    0 0 25px var(--secondary-color);
+  animation-name: bubbles-motion;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bubbles-motion {
+  from {
+    top: -20px;
+  }
+  to{
+    top: 70vh;
+    scale: 0.0;
+  }
 }
 
 @keyframes changeLetter {
@@ -270,6 +302,7 @@ header > ul > li:hover{
 
   header > ul {
     width: 50%;
+    padding: 1em 1.5em;
   }
   .moveLeft{
     animation: scrolling 20s linear infinite;
@@ -313,11 +346,26 @@ header > ul > li:hover{
   }
 
   .welcome > div > h2 {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 
   .project-image > div {
-    padding-top: 3em;
+    padding-top: 2em;
+  }
+
+  .projects-list {
+    flex-direction: column;
+    height: 500px;
+  }
+
+  .project-container{
+    flex-grow: 1;
+    height: 0;
+    width: 100% !important;
+  }
+
+  .project-container:hover {
+    height: 50%;
   }
 }
 
@@ -337,10 +385,10 @@ header > ul > li:hover{
   overflow: hidden;
 }
 
-.project-container{
+.project-container {
   flex-grow: 1;
   width: 0;
-  transition: width 0.7s ease;
+  transition: width .7s ease, height 0.7s ease;
 }
 
 .project-image {

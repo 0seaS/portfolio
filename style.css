@@ -346,7 +346,7 @@ header > ul > li:hover{
 .project-image {
   height: 350px;
   background-size: cover;
-  background-position: 50% 25%;
+  background-position: center;
 }
 
 .project-image > div {
@@ -429,15 +429,15 @@ header > ul > li:hover{
 */
 
 .pokeBg{
-  background-image: url('poekdex.png');
+  background-image: url('/poekdex.png');
 }
 
 .rickBg{
-  background-image: url('rickAndMorty.png');
+  background-image: url('/rickAndMorty.png');
 }
 
 .weatherBg{
-  background-image: url('weather.png');
+  background-image: url('/weather.png');
 }
 
 /*

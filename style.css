@@ -352,7 +352,7 @@ header > ul > li:hover{
 .project-image > div {
   display: none;
   width: 70%;
-  padding-top: 6em;
+  padding-top: 4em;
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
@@ -440,6 +440,7 @@ header > ul > li:hover{
   background-image: url('weather.png');
 }
 
+/*
 .project-image:hover {
 
   width: 100%;
@@ -450,6 +451,7 @@ header > ul > li:hover{
 .project-image:hover + .project-description{
   display: none;
 }
+*/
 
 /* contact */
 

@@ -58,7 +58,7 @@ header > ul {
   box-shadow: 2px 2px 5px black;
   width: 70%;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
   color: var(--text-color2);
 }
 
@@ -125,9 +125,10 @@ header > ul > li:hover{
 
 .bubles > span {
   background-color: var(--main-color);
-  height: 20px;
-  width: 20px;
+  height: 5vw;
+  width: 5vw;
   position: absolute;
+  top: -10vw;
   /*top: -40px;*/
   border-radius: 50%;
   box-shadow: 0 0 10px var(--main-color),
@@ -139,7 +140,7 @@ header > ul > li:hover{
 
 @keyframes bubbles-motion {
   from {
-    top: -20px;
+    top: -10vw;
   }
   to{
     top: 70vh;
@@ -290,7 +291,7 @@ header > ul > li:hover{
   width: 75px;
   height: 75px;
   display: block;
-  filter: drop-shadow(0 1px 5px white);
+  filter: drop-shadow(1px 1px 10px var(--bg-color2));
 }
 
 /* Medias */
@@ -317,11 +318,13 @@ header > ul > li:hover{
 
 @media (width < 560px) {
   .skills-list {
-    gap: .5em;
+    gap: 0em;
   }
 
   header > ul {
     width: 90%;
+    justify-content: space-between;
+    font-size: .8em;
   }
 
   .welcome {
@@ -329,7 +332,7 @@ header > ul > li:hover{
   }
 
   .skills-list > li {
-    scale: .7;
+    scale: .5;
   }
 
   .moveLeft{
@@ -366,6 +369,17 @@ header > ul > li:hover{
 
   .project-container:hover {
     height: 50%;
+  }
+
+  @keyframes scrolling {
+    to {
+      transform: translate(65%);
+    }
+  }
+
+  .contact__list > li > a > img {
+    height: 75px !important;
+    width: 75px !important;
   }
 }
 
@@ -426,6 +440,10 @@ header > ul > li:hover{
   justify-content: space-evenly;
   color: var(--title-color1);
   padding: 1em 0;
+}
+
+.project-image > div > div:nth-child(2) > a {
+  text-align: center;
 }
 
 .project-image div div:nth-child(1){

@@ -47,7 +47,7 @@ h2, h3{
 header {
   width: 100vw;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
 }
 
 header > ul {
@@ -67,6 +67,57 @@ header > ul > li:hover{
   cursor: pointer;
 }
 
+.contactMe {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10vh;
+  right: 5vw;
+  z-index: 1;
+  box-shadow: 0px 0px 10px var(--secondary-color);
+  overflow: hidden;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+
+  animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+  20% {
+    scale: 1.2;
+    box-shadow: 0px 0px 30px var(--secondary-color);
+  }
+  40% {
+    scale: 1;
+    box-shadow: 0px 0px 10px var(--secondary-color);
+  }
+  60% {
+    scale: 1.4;
+    box-shadow: 0px 0px 70px var(--secondary-color);
+  }
+  80%, 100% {
+    scale: 1;
+    box-shadow: 0px 0px 10px var(--secondary-color);
+  }
+}
+
+.contactMe > a {
+  text-align: center;
+  display: block;
+}
+
+.contactMe img{
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+
+.contactMe > a > div {
+  padding: 0;
+  margin: 0;
+  height: 1em;
+}
+
 .wrap-section{
   width: 100vw;
   min-height: 100vh;
@@ -77,9 +128,10 @@ header > ul > li:hover{
   background: linear-gradient(
     var(--main-color) 0%, 
     var(--secondary-color) 20%, 
-    var(--bg-color2) 50%);
+    var(--bg-color2) 40%);
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 
 .welcome {
@@ -91,8 +143,13 @@ header > ul > li:hover{
 }
 
 .welcome > h1 {
-  text-shadow: 1px 1px 5px var(--main-color);
   font-size: 2em;
+}
+
+.welcome > h1 > span {
+  color: var(--title-color1);
+  text-shadow: 0.3px .3px 1px black;
+  font-size: 1.3em;
 }
 
 .welcome > div {
@@ -263,7 +320,7 @@ header > ul > li:hover{
   margin-top: 2em;
   gap: 5em;
   justify-content: space-evenly;
-
+  padding: 1em 0;
   /**/
 }
 
@@ -319,6 +376,7 @@ header > ul > li:hover{
 @media (width < 560px) {
   .skills-list {
     gap: 0em;
+    padding: 0;
   }
 
   header > ul {
@@ -402,7 +460,8 @@ header > ul > li:hover{
 .project-container {
   flex-grow: 1;
   width: 0;
-  transition: width .7s ease, height 0.7s ease;
+  filter: brightness(85%);
+  transition: width .7s ease, height 0.7s ease, filter .5s linear;
 }
 
 .project-image {
@@ -435,6 +494,10 @@ header > ul > li:hover{
   margin-bottom: 1em;
 }
 
+.project-image > div > div:nth-child(1) > h4 {
+  color: var(--main-color);
+}
+
 .project-image > div > div:nth-child(2) {
   display: flex;
   justify-content: space-evenly;
@@ -457,6 +520,7 @@ header > ul > li:hover{
 
 .project-container:hover {
   width: 60%;
+  filter: brightness(100%);
 }
 
 .project-container:hover .project-image > div {

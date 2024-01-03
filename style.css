@@ -57,7 +57,7 @@ header > ul {
   padding: .5em 1em;
   border-radius: 0px 7px 7px 0px;
   
-  height: 50vh;
+  height: 60vh;
   margin: 20vh 0;
   justify-content: space-evenly;
   align-items: center;
@@ -360,96 +360,6 @@ header > ul > li:hover{
   filter: drop-shadow(1px 1px 10px var(--bg-color2));
 }
 
-/* Medias */
-@media (width > 1200px) {
-  .skills-list {
-    gap: 8em;
-    justify-content: space-evenly;
-  }
-
-  header > ul {
-    width: 50%;
-    padding: 1em 1.5em;
-  }
-  .moveLeft{
-    animation: scrolling 20s linear infinite;
-    animation-direction: alternate;
-  }
-
-  .moveRight{
-    animation: scrolling 20s linear infinite;
-    animation-direction: alternate-reverse;
-  }
-}
-
-@media (width < 560px) {
-  .skills-list {
-    gap: 0em;
-    padding: 0;
-  }
-
-  header > ul {
-    width: 90%;
-    justify-content: space-between;
-    font-size: .8em;
-  }
-
-  .welcome {
-    padding: 2em 0em;
-  }
-
-  .skills-list > li {
-    scale: .5;
-  }
-
-  .moveLeft{
-    animation: scrolling 10s linear infinite;
-    animation-direction: alternate;
-  }
-
-  .moveRight{
-    animation: scrolling 10s linear infinite;
-    animation-direction: alternate-reverse;
-  }
-  .welcome {
-    width: 80%;
-  }
-
-  .welcome > div > h2 {
-    font-size: 1.1em;
-  }
-
-  .project-image > div {
-    padding-top: 2em;
-  }
-
-  .projects-list {
-    flex-direction: column;
-    height: 500px;
-  }
-
-  .project-container{
-    flex-grow: 1;
-    height: 0;
-    width: 100% !important;
-  }
-
-  .project-container:hover {
-    height: 50%;
-  }
-
-  @keyframes scrolling {
-    to {
-      transform: translate(65%);
-    }
-  }
-
-  .contact__list > li > a > img {
-    height: 75px !important;
-    width: 75px !important;
-  }
-}
-
 /* PROJECTS */
 
 #projects > .wrap-section-content > p {
@@ -474,7 +384,7 @@ header > ul > li:hover{
 }
 
 .project-image {
-  height: 350px;
+  height: 300px;
   background-size: cover;
   background-position: center;
 }
@@ -613,11 +523,107 @@ header > ul > li:hover{
 }
 
 .contact__list > li > a > img {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
 }
 .contact__list > li > a > div {
   text-align: center;
   color: #75332D;
 }
 
+/* Medias */
+@media (width > 1200px) {
+  .skills-list {
+    gap: 8em;
+    justify-content: space-evenly;
+  }
+
+  header > ul {
+    width: 50%;
+    padding: 1em 1.5em;
+  }
+  .moveLeft{
+    animation: scrolling 20s linear infinite;
+    animation-direction: alternate;
+  }
+
+  .moveRight{
+    animation: scrolling 20s linear infinite;
+    animation-direction: alternate-reverse;
+  }
+  .project-image {
+    height: 350px;
+  }
+  .contact__list > li > a > img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (width < 560px) {
+  .skills-list {
+    gap: 0em;
+    padding: 0;
+  }
+
+  header > ul {
+    width: 90%;
+    justify-content: space-between;
+    font-size: .8em;
+  }
+
+  .welcome {
+    padding: 2em 0em;
+  }
+
+  .skills-list > li {
+    scale: .5;
+  }
+
+  .moveLeft{
+    animation: scrolling 10s linear infinite;
+    animation-direction: alternate;
+  }
+
+  .moveRight{
+    animation: scrolling 10s linear infinite;
+    animation-direction: alternate-reverse;
+  }
+  .welcome {
+    width: 80%;
+  }
+
+  .welcome > div > h2 {
+    font-size: 1.1em;
+  }
+
+  .project-image > div {
+    padding-top: 2em;
+  }
+
+  .projects-list {
+    flex-direction: column;
+    height: 500px;
+  }
+
+  .project-container{
+    flex-grow: 1;
+    height: 0;
+    width: 100% !important;
+  }
+
+  .project-container:hover {
+    height: 50%;
+  }
+
+  @keyframes scrolling {
+    to {
+      transform: translate(65%);
+    }
+  }
+
+  .contact__list > li > a > img {
+    height: 75px !important;
+    width: 75px !important;
+  }
+}
